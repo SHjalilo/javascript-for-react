@@ -85,15 +85,29 @@ console.log(revStr(myStr)); // => revStr
 
 // use outerHTML 
 //
-var make = document.getElementById("make");
-//var reve = rev(make);
-console.log(make);
-document.getElementById("out").innerHTML ="";
+var title = document.getElementById("title").innerHTML;
+var reverse = rev(title);
+var res = document.getElementById("result").innerHTML = `<h1> ${reverse}</h1>`;
+
+console.log(" hi "+reverse);
+
+// write from user 
+
+document.getElementById("submit-btn").addEventListener("click",function() {
+    var inputStr = document.getElementById("str-input").value;
+    console.log(inputStr);
+    var upper = inputStr.toUpperCase();
+    var replacedWord = upper.replace("O","OU");
+    var reversedWord = upper.split("").reverse().join("");
+
+    document.getElementById("result").innerHTML=`${upper} --- replaced words : ${replacedWord} , --- ${reversedWord} `;
+    
+});
 
 
 
 
 
-
+   
 
 
