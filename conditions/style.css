@@ -1,0 +1,17 @@
+.con{
+  text-Align: center;
+  margin: auto;
+  width: 40%;
+  padding: 30px;
+  background-color: rgb(180, 180, 180);
+  
+}
+body {
+  background-color: rgb(240, 240, 240);
+}
+#btn {
+  margin-top : 10px;
+}
+#v {
+  margin-top : 10px;
+}
