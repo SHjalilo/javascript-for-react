@@ -38,6 +38,44 @@ console.log(students); // =>["Ammar","dahha"]
 students.splice(0,0,"jalil");
 console.log(students); // =>["jalil","Ammar","dahha"] 
 
+
 students.splice(1,0,"abdo");
 console.log(students); // =>["jalil","abdo","Ammar","dahha"] 
 
+//
+
+var arr = [12,100,50,76,8];
+
+console.log(Array.isArray(arr)); // => true 
+
+//
+
+console.log(arr.includes(76)); // => true
+console.log(arr.includes(90)); // => false
+
+//
+
+console.log(arr.indexOf(50)); // => index : 2
+console.log(arr.indexOf(138)); // => index : -1 ! index not found ?
+
+// shift 
+
+//console.log(arr.shift()); // => 12
+
+console.log(arr); // => [12,100,50,76,8]
+arr.shift();
+console.log(arr); // => [100,50,76,8]
+
+// unshift 
+
+console.log(arr); // => [100,50,76,8]
+arr.unshift(432);
+console.log(arr); // => [432,100,50,76,8]
+
+// reverse 
+
+console.log(arr); // => [432,100,50,76,8]
+arr.reverse();
+console.log(arr); // => [8,76,50,100,432]
+
+// challenge 
