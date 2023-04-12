@@ -54,6 +54,19 @@ for(var i of nm){
 	console.log(i); // \n: j => a => l => i => l 
 }
 
+// for index2.html 
+
+var btn = document.getElementById("btn-submit");
+
+btn.addEventListener("click",myFunc);
+
+function myFunc(){
+	var getData = getElementById("v").value;
+	for(var i of getData){
+	document.getElementById("vow").innerHTML = `${i}`;	
+	}
+
+}
 
 
 
