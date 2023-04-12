@@ -79,3 +79,37 @@ arr.reverse();
 console.log(arr); // => [8,76,50,100,432]
 
 // challenge 
+
+var btnAdd = document.getElementById("btn-a");
+	var std = ["Med","Josef"];
+	document.getElementById("res").innerHTML = `${std}`;
+btnAdd.addEventListener("click",myFunction);
+// function add item to array 
+function myFunction(){
+	var data = document.getElementById("st").value;
+	std.push(data);
+	document.getElementById("res").innerHTML = `${std}`;
+	console.log(std);
+}
+
+var btnDel = document.getElementById("btn-d");
+
+btnDel.addEventListener("click",delFunction);
+// function delete item from array
+function delFunction(){
+	std.pop();
+	document.getElementById("res").innerHTML = `${std}`;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
