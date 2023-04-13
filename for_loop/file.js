@@ -27,15 +27,23 @@ document.getElementById("stdList").innerHTML+=sList[i]+" - ";
 var btn = document.getElementById("btnSearch");
 btn.addEventListener("click",showFunction);
 //
-var data = document.getElementById("std").value;
+document.getElementById("existStd").innerHTML = ` `;
 function showFunction(){
 
+var data = document.getElementById("std").value.toLowerCase(); 
+      var isFound = false;
     for(var i=0;i<sList.length;i++){
-      if(sList[i] === data){
+      var tlc = sList[i].toLowerCase();
+
+      if(data == tlc){
+          isFound = true;
           //console.log("existe !");
-          document.getElementById("existStd").innerHTML = `${sList[i]} exists in students `;
-          break;
       }
+    }
+    if(isFound == true){
+        document.getElementById("existStd").innerHTML = `${data} exists in students `;
+    }else{
+        document.getElementById("existStd").innerHTML = `${data} is not in students `;
     }
 }
 
