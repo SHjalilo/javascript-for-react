@@ -14,16 +14,11 @@ for (var n =0; n <= 500; n++){
 	}
 }
 
-//
-
 // show in html : 10 X 0 = 0 => 10 X 1 = 10 => 10 X 2 = 20 ...  
 for(var mul = 0; mul <=30; mul++){
 	var total = 10*mul;
 	console.log("10 X "+mul+" = "+total);
-	document.getElementById("res").innerHTML += ` 10 X ${mul} = ${total} </br>`;
-
-	
-
+	//document.getElementById("res").innerHTML += ` 10 X ${mul} = ${total} </br>`;
 }
 
 // for loop with string 
@@ -46,7 +41,6 @@ for(var i in nm){
 	console.log(nm[i]); // \n: j => a => l => i => l
 }
 
-
 // for ... of 
 console.log("---------");
 
@@ -58,14 +52,33 @@ for(var i of nm){
 
 var btn = document.getElementById("btn-submit");
 
-btn.addEventListener("click",myFunc);
+btn.addEventListener("click",myFunc); // im using method 2 
 
-function myFunc(){
-	var getData = getElementById("v").value;
+// 1 method : ------------------------------------------------------------------
+function myFunction(){
+	var getData = document.getElementById("v").value;
 	for(var i of getData){
-	document.getElementById("vow").innerHTML = `${i}`;	
+	// add new var to make condition 
+		var tlc = i.toLowerCase();
+		if(tlc!="a" && tlc!="e" && tlc!="i" && tlc!="o" && tlc!="u"){
+			// don't forget += 
+			document.getElementById("vow").innerHTML += `${i} </br>`;
+			//console.log(i);	
+		}
 	}
 
+}
+
+// 2 method : ------------------------------------------------------------------
+const vowels = ["a","e","u","i","o"];
+function myFunc(){
+	var getData = document.getElementById("v").value;
+	for(var i of getData){
+		var tlc = i.toLowerCase();
+		if(!vowels.includes(tlc)){
+			document.getElementById("vow").innerHTML += `${i} </br>`;
+		}
+	}
 }
 
 
