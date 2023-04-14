@@ -26,18 +26,14 @@ document.getElementById("stdList").innerHTML+=sList[i]+" - ";
 //
 var btn = document.getElementById("btnSearch");
 btn.addEventListener("click",showFunction);
-//
 document.getElementById("existStd").innerHTML = ` `;
 function showFunction(){
-
 var data = document.getElementById("std").value.toLowerCase(); 
-      var isFound = false;
+      var isFound = false; // => isFound out of loop 
     for(var i=0;i<sList.length;i++){
       var tlc = sList[i].toLowerCase();
-
       if(data == tlc){
           isFound = true;
-          //console.log("existe !");
       }
     }
     if(isFound == true){
