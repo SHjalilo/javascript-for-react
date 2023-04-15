@@ -17,3 +17,25 @@ for(var i =0;i<student.length;i++){
 	      document.getElementById("std").innerHTML +=` => ${currentStudent} <br>`;
 	}
 }
+
+// -----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
