@@ -49,4 +49,3 @@ testArr.forEach(function(element){
     console.log(element * 5); // 100 => 150 => 250 => 200
 }
 
-
