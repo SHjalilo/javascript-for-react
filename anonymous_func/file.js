@@ -36,6 +36,8 @@ function myfunc(){
      setTimeout(generatColor, 130);
 }
 
+// function exrecice 
+// https://www.w3resource.com/javascript-exercises/javascript-functions-exercises.php 
 
 
 
