@@ -37,7 +37,7 @@ let promis = new Promise(function (resolve,reject) {
 
 });
 console.log("after the promis creation and befor then and catch");
-p.then(function () {
+promis.then(function () {
   console.log("calling then !");
 }).catch(function () {
   console.log("error");
